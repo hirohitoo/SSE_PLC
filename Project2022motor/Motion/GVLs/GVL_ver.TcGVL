@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <GVL Name="GVL_ver" Id="{d4ff4996-ab4e-4e8c-b85d-bbb4d256ceea}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	Brake_i_disable AT %I* :BOOL;
+	AXIS1_Brake_q_disabled AT %Q* :BOOL;
+	AXIS2_Brake_q_disabled AT %Q* :BOOL;
+	AXIS3_Brake_q_disabled AT %Q* :BOOL;
+	AXIS4_Brake_q_disabled AT %Q* :BOOL;
+	AXIS5_Brake_q_disabled AT %Q* :BOOL;
+	AXIS6_Brake_q_disabled AT %Q* :BOOL;
+	Axis4_ActPos AT %Q* :REAL;
+	Axis4_ActVelo AT %Q* :REAL;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
