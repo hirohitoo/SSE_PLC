@@ -1,0 +1,58 @@
+Id;Default
+953;%.3e
+559;%d
+594;%d*
+835;AtSpd
+251;Beamline
+163;BL
+153;CL Main Turbo Valve OP
+40;CLOSED
+723;End Station
+312;FaultNC
+47;GCC1
+977;GCC1 & TPM1 & GCC2
+613;GCC2
+874;Main TPM1 
+833;Main Turbo 400
+959;Main Turbo 80
+225;Main Turbo TPM1
+734;Main Turbo TPM1 RMT
+854;Main Turbo TPM1 Rremote
+443;Main Turbo Valve
+763;OP BL Valve CL
+728;OP BL VGC CL
+124;OP BL VGC0 CL
+642;OP Main Turbo Valve CL
+794;OP Main Turbo VCC CL
+638;OP Main Turbo VCC2 CL
+199;OP Main Turbo VCL
+480;OP Main Turbo VGC CL
+41;OP Main Turbo VGC1 CL
+687;OP Main Turbo VGG CL
+845;OP Main Turbo VPG CL
+599;OP Small Turbo VCC CL
+992;OP Small Turbo VCC3 CL
+806;OP Turbo Valve CL
+111;OPEN
+333;OPN_DO
+621;PRESS_OK
+414;RESS_OK
+226;Small TPM2
+801;Small TPM2 RMT
+297;Small TPM3
+383;Small TPM3 Remote
+676;Small TPM3 RMT
+840;Small Trubo 80
+159;Small Trubo TPM2
+611;Small Trubo TPM2 RMT
+175;T
+899;TPM01 Start/Stop
+715;TPM1
+629;TPM2
+51;TPM3
+172;VGC0
+550;VGC01
+274;VGC1
+384;VGC2
+171;VGC3
+221;VGC4
