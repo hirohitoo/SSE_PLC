@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <GVL Name="GVL_ver" Id="{e58e0772-4280-416f-b13b-1b1a94c2c382}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	V0OPENREQ AT %I*:BOOL;
+	V1BYPASS AT %I*:BOOL;
+	V2OPENREQ AT %I*:BOOL;
+	V3OPENREQ AT %I*:BOOL;
+	V4OPENREQ AT %I*:BOOL;
+	PTM1STARTREQ AT %I*:BOOL;
+	PTM2STARTREQ AT %I*:BOOL;
+	PTM3STARTREQ AT %I*:BOOL;
+	GCC1ONREQ AT %I*:BOOL;
+	GCC2ONREQ AT %I*:BOOL;
+	GCC1AO AT %I*:INT;
+	GCC2AO AT %I*:INT;
+
+	VGC0OPENREQ AT %I*:BOOL;
+	VGC1OPENREQ AT %I*:BOOL;
+	VCC2_r_OPENREQ AT %I*:BOOL;
+	VCC3_r_OPENREQ AT %I*:BOOL;
+	
+	PTM1_q_RunDO AT%Q*: BOOL; // Start/Stop for TC110 link this output to the Pumping station bit -3-
+    PTM1_q_PumpingStation AT%Q*: BOOL; // Start/Stop interlock -4-
+    PTM1_q_xRemote AT%Q*: BOOL; // Remote Priority -14-
+    PTM1_i_xAtSpd AT%I*: BOOL; // Normaml operation when true -8-
+    PTM1_i_xRemote AT%I*: BOOL; // Remote Priority RBV -23-
+	PTM1_i_xFaultNC AT%I*: BOOL; // Error -9-
+	
+    PTM2_q_RunDO AT%Q*: BOOL; // Start/Stop for TC110 link this output to the Pumping station bit -3-
+    PTM2_q_PumpingStation AT%Q*: BOOL; // Start/Stop interlock -4-
+    PTM2_q_xRemote AT%Q*: BOOL; // Remote Priority -14-
+    PTM2_i_xAtSpd AT%I*: BOOL; // Normaml operation when true -8-
+    PTM2_i_xRemote AT%I*: BOOL; // Remote Priority RBV -23-
+	PTM2_i_xFaultNC AT%I*: BOOL; // Error -9-
+	
+	PTM3_q_RunDO AT%Q*: BOOL; // Start/Stop for TC110 link this output to the Pumping station bit -3-
+    PTM3_q_PumpingStation AT%Q*: BOOL; // Start/Stop interlock -4-
+    PTM3_q_xRemote AT%Q*: BOOL; // Remote Priority -14-
+    PTM3_i_xAtSpd AT%I*: BOOL; // Normaml operation when true -8-
+    PTM3_i_xRemote AT%I*: BOOL; // Remote Priority RBV -23-
+	PTM3_i_xFaultNC AT%I*: BOOL; // Error -9-
+	
+	VGC0_q_xOPN_DO AT%Q*: BOOL; //24V open/close
+	VGC0_i_xOpnLS AT%I*  : BOOL; //Open position SW
+    VGC0_i_xClsLS AT%I*  : BOOL; //Close position SW
+	VGC0_i_xUpstream_OK  AT%Q*  : BOOL;
+	VGC0_i_xDwstream_OK  AT%Q*  : BOOL;
+	
+	VGC1_q_xOPN_DO AT%Q*: BOOL; //24V open/close
+	VGC1_i_xOpnLS AT%I*  : BOOL; //Open position SW
+    VGC1_i_xClsLS AT%I*  : BOOL; //Close position SW
+	VGC1_i_xUpstream_OK  AT%Q*  : BOOL;
+	VGC1_i_xDwstream_OK  AT%Q*  : BOOL;
+    
+    VCC2_q_xOPN_DO AT%Q*: BOOL; //24V open/close
+	VCC2_i_xOpnLS AT%I*  : BOOL; //Open position SW
+    VCC2_i_xClsLS AT%I*  : BOOL; //Close position SW
+    
+    VCC3_q_xOPN_DO AT%Q*: BOOL; //24V open/close
+	VCC3_i_xOpnLS AT%I*  : BOOL; //Open position SW
+    VCC3_i_xClsLS AT%I*  : BOOL; //Close position SW
+    
+    GCC1_rPRESS AT%Q* : REAL; //This is the human-readable pressure
+    GCC1_xPRESS_OK AT%Q*: BOOL;
+	GCC1_xHV_DIS AT %Q* : BOOL;
+	
+	GCC2_rPRESS AT%Q*: REAL; //This is the human-readable pressure
+    GCC2_xPRESS_OK AT%Q*: BOOL;
+	GCC2_xHV_DIS AT %Q* : BOOL;
+
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
