@@ -1,0 +1,17 @@
+Id;Default
+862;Admin
+128;Enable motion
+113;None
+596;Not Braked
+308;Operator
+898;Pos     Axis1     Velo
+228;Pos     Axis10 R   Velo
+968;Pos     Axis2     Velo
+781;Pos     Axis3    Velo
+588;Pos     Axis4     Velo
+267;Pos     Axis5     Velo
+376;Pos     Axis6     Velo
+367;Pos     Axis7 X     Velo
+330;Pos     Axis8 Y     Velo
+640;Pos     Axis9 Z    Velo
+667;Service
