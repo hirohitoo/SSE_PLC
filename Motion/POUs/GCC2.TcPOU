@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="GCC2" Id="{0d92b97a-0c10-46eb-9d94-2022c80c6ed6}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM GCC2
+VAR
+	rfbAdsRead: ADSREAD;
+	sNetId: T_AmsNetID:='192.168.0.3';
+	sPort: T_AmsPort:=851;
+	bRead:BOOL;
+	r_Press :REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[rfbAdsRead(
+	NETID:= sNetID , 
+	PORT:= sPort, 
+	IDXGRP:= 16#4040, 
+	IDXOFFS:= 971076 , 
+	LEN:= SIZEOF(r_Press), 
+	DESTADDR:= ADR(r_Press) , 
+	READ:= bRead);]]></ST>
+    </Implementation>
+    <LineIds Name="GCC2">
+      <LineId Id="9" Count="7" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

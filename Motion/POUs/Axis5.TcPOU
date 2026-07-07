@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.3">
+  <POU Name="Axis5" Id="{b9c9d670-e466-4254-8882-4b0cf887a8d4}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Axis5
+VAR
+	fbPower: MC_POWER;
+	Axis: AXIS_REF;
+	biLimFwd AT %I*: BOOL;
+	biLimBwd AT %I*: BOOL;
+	boBrake AT %Q*:BOOL;
+	bEnable: BOOL := TRUE;
+	rPosition AT %Q*:REAL;
+	rVelocity AT %Q*:REAL;
+	roPosition AT %Q*:REAL;
+	fbReadActialPosition: MC_ReadActualPosition;
+	fbHalt: MC_Halt;
+	boHalt AT%Q*:BOOL;
+	fbMoveAbsolute: MC_MoveAbsolute;
+	boMoveAbsolute AT%Q*:BOOL;
+	fbReadActualVelocity: MC_ReadActualVelocity;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbPower(Axis:=Axis,
+	Enable:=bEnable,
+	Enable_Positive:=biLimFwd,
+	Enable_Negative:=biLimBwd);
+boBrake:=bEnable;
+fbReadActialPosition(
+	Axis:=Axis , 
+	Enable:=TRUE , 
+	Valid=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> , 
+	Position=>rPosition );
+fbHalt(
+	Axis:=Axis , 
+	Execute:=boHalt , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=>, 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+fbMoveAbsolute(
+	Axis:=Axis , 
+	Execute:=boMoveAbsolute , 
+	Position:=roPosition , 
+	Velocity:=0.1 , 
+	Acceleration:= , 
+	Deceleration:= , 
+	Jerk:= , 
+	BufferMode:= , 
+	Options:= , 
+	Done=> , 
+	Busy=> , 
+	Active=> , 
+	CommandAborted=> , 
+	Error=> , 
+	ErrorID=> );
+fbReadActualVelocity(
+	Axis:=Axis , 
+	Enable:=TRUE , 
+	Valid=> , 
+	Busy=> , 
+	Error=> , 
+	ErrorID=> , 
+	ActualVelocity=>rVelocity );
+	]]></ST>
+    </Implementation>
+    <LineIds Name="Axis5">
+      <LineId Id="53" Count="49" />
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
